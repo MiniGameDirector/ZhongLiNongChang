@@ -26,9 +26,12 @@
  ![image](https://user-images.githubusercontent.com/31276067/218479624-520138a1-8732-4ef7-aaef-e0fcb3bb6432.png)
 
 
- 
+ ![image](https://user-images.githubusercontent.com/31276067/218479798-04b7abf0-2207-4fd4-a538-e23b9867c0ef.png)
+
 
 然后，场景里的白云素材，都删了（转起来碍眼）。 
+![image](https://user-images.githubusercontent.com/31276067/218479766-2daeef18-ac34-4f7b-a98a-eccfb3db089c.png)
+
  
 
 好了，场景素材搭建完毕。 
@@ -36,6 +39,7 @@
 
 我们就要下图这样的角度，轮子，也就是场地，在转动。
 
+![image](https://user-images.githubusercontent.com/31276067/218479852-187518d3-8ab6-4775-8716-150d9f527a1a.png)
 
 
 
@@ -62,6 +66,7 @@
 场景素材 + 牛仔背景音_0001.mp3 + 蓝天白云-mute.mp4（背景音的音量，你看看合不合适，我是调小了一些）
 
 
+![image](https://user-images.githubusercontent.com/31276067/218479896-f8179f11-cc68-4953-afe8-ec0d3b8e0f60.png)
 
 
 
@@ -82,7 +87,8 @@
 互动： 
 从屏幕的左，或右 （不要左右同时出），出《动物_合集》中的动物， 由远及近，跑向（run动作）屏幕前边，或者跳jump向屏幕前边。
 
-中小型动物，如果玩家点击了中小型动物，就 播放 卡通挨打.wav  + 《卡通爆炸+旋风》 【小动物挨打+倒地.mp3】 + 动物die动作， 同时计分板 + 1
+中小型动物，如果玩家点击了中小型动物，就 播放 卡通挨打.wav  + 《卡通爆炸+旋风》 【小动物挨打+倒地.mp3】 + 动物die动作， 同时计分板 + 1![image](https://user-images.githubusercontent.com/31276067/218479949-48301268-1dd3-4760-a713-a537d5c589c7.png)
+
  
 
 如果玩家点击了 大型动物，第一次，播放卡通挨打.wav + 《卡通爆炸+旋风》（选一个和上边不同的效果），然后大型动物往后退一点的damage动作。
