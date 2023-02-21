@@ -96,7 +96,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void GameOverEvent() {
         AudioController.GetInstance().DisableOther();
-        StartCoroutine(AudioController.GetInstance().SetAudioClipByName("ø™≥°1√Î“Ù¿÷", false, AudioController.GetInstance().CreateAudio(),delegate() {
+        StartCoroutine(AudioController.GetInstance().SetAudioClipByName("…⁄…˘", false, AudioController.GetInstance().CreateAudio(),delegate() {
             StartCoroutine(AudioController.GetInstance().SetAudioClipByName("Ω· ¯”Ô“Ù", false, null, GameOverRealEvent));
             AudioController.GetInstance().DisableOther();
         }));

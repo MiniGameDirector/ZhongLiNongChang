@@ -7,17 +7,16 @@ public class BearController : MonoBehaviour
 
     public Transform bear;
     public string startAnimName, latterAnimName;
-    public Vector3 bearStandePos;
     private Animator bearAnimator;
-    private Vector3 bearStartPos;
+    private Vector3 bearStartRot;
     private Tweener tween;
 
     // Start is called before the first frame update
     void Awake()
     {
-        //bear = this.transform;
-        bearStartPos = bear.position;
-        bearAnimator = bear.GetChild(0).GetComponent<Animator>();
+        bear = this.transform;
+        bearStartRot = bear.localEulerAngles;
+        bearAnimator = bear.GetChild(0).GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,17 +27,22 @@ public class BearController : MonoBehaviour
     /// 初始化 animation、transform
     /// </summary>
     public void OnEnable() {
-        bearAnimator.Play(startAnimName);
-        tween = bear.DOLocalMove(bearStandePos, 3f).SetEase(Ease.Linear).OnComplete(delegate ()
+        //bearAnimator.Play(startAnimName);
+        StartCoroutine(AudioController.GetInstance().SetAudioClipByName("连续跑步", false, 
+            AudioController.GetInstance().CreateAudio()));
+        tween = bear.DORotate(Vector3.zero, 3.4f).SetEase(Ease.Linear).OnComplete(delegate ()
         {
-            bearAnimator.Play(latterAnimName);
-            StartCoroutine(AudioController.GetInstance().SetAudioClipByName("开场语音", false, null));
+            //bearAnimator.Play(latterAnimName);
+            StartCoroutine(AudioController.GetInstance().SetAudioClipByName("开场", false, 
+                AudioController.GetInstance().CreateAudio(),delegate() {
+                    UIManager.GetInstance().GameScene();
+                }));
         });
     }
     public void OnDisable()
     {
         tween.Kill();
-        bear.position = bearStartPos;
+        bear.localEulerAngles = bearStartRot;
         StopAllCoroutines();
     }
 }
